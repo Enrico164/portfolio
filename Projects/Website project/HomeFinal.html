@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+.dot {  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #C0C0C0;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.fade {  animation-name: fade;
+  animation-duration: 1s;
+}
+.mySlides {  display: none;
+}
+.next {  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+.next {  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+.slideshow-container {  max-width: 10000px;
+  position: relative;
+  margin: auto;
+}
+.text1a {    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    bottom: 230px;
+    left: 125px;
+    width: 50%;
+    text-align: left: ;
+}
+.text1b {    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    color: #000000;
+    font-size: 20px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    bottom: 200px;
+    left: 125px;
+    width: 50%;
+    text-align: left: ;
+}
+.text2a {    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    color: #000000;
+    font-size: 30px;
+	font-weight: bold;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    bottom: 230px;
+	left: 900px;
+    width: 100%;
+    text-align: left: ;
+}
+.text2b {    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    color: #000000;
+    font-size: 20px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    bottom: 175px;
+    left: 900px;
+    width: 30%;
+    text-align: left;
+}
+	
+a { 
+	text-decoration: none;
+	color: #2F2F2F;
+}
+.a:link,.a:visited {
+	text-decoration: none;
+	color: #2F2F2F;
+}
+.a:hover{
+	text-decoration: underline;
+	color: #2f2f2f 
+	}
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('Teams background 50.png','Windows background.png','surface background.png','FeedbackBackground.png','Microsoft 365 background.png')">
+<table width="240" height="886" border="0">
+  <tbody>
+    <tr>
+      <td height="94" colspan="6" align="center">&nbsp;
+		<table width="100%" height="100%" align="absolute" border="0"> 
+		  <tbody>
+			<tr> 
+			  <td width="17%" align=""><a href="HomeFinal.html"><img src="Logo.png" alt="" width="162" height="35" id="Microsoft_logo" align="top"/></a></td>
+			  <td width="17%" align="center"><a href="Microsoft 365 page.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','Microsoft 365 background.png',1)"><img src="Microsoft 365 no background.png" alt="" width="311" height="68" id="Image10"></a></td>
+			  <td width="17%" align="center"><a href="Teams Page.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','Teams background 50.png',1)"><img src="Team nobackground 50.png" alt="" width="189" height="67" id="Image12"></a></td>
+			  <td width="17%" align="center"><a href="Windows Page.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','Windows background.png',1)"><img src="Windown no background.png" alt="" width="229" height="68" id="Image14"></a></td>
+			  <td width="17%" align="center"><a href="Surface Page.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','surface background.png',1)"><img src="Surface no background.png" alt="" width="207" height="68" id="Image2"></a></td>
+			  <td width="17%" align="center"><a href="Feedback Page.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image','','FeedbackBackground.png',1)"><img src="FeedbackNobackground.png" alt="" width="239" height="68" id="Image"></a></td>
+	  </tr></tbody></table></td>
+    </tr>
+    <tr>
+      <td height="359" colspan="6"><!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <img src="Slideshowimage1.webp" style="width:100%">
+            <div class="text1a">Microsoft 365</div>
+            <div class="text1b">Everything you need to achieve more in less time</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="Slideshowimage2.webp" style="width:100%">
+            <div class="text2a">Be You</div>
+            <div class="text2b">Discover Inclusive Technology for people with Dyslexia and other neurodiversity</div>
+          </div>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1)"></span> <span class="dot" onclick="currentSlide(2)"></span> </div>
+        <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}	  
+		  
+  </script>
+        &nbsp;</td>
+    </tr>
+    <tr cellspacing="1">
+      <td width="162" height="370" valign="top" style="text-align: center; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: x-large; font-weight: normal; color: #000000; font-style: normal;"><p><img src="SurfaceLaptop5.png" alt="" width="380" height="213"/></p>
+        <p style="text-align: left; font-weight: 500;"> Surface Laptop 5 </p>
+        <p style="font-size: medium; text-align: left; color: #212121;">Sleek portability and multitasking speed powered by<br>
+          12th Gen Intel® Core, with Windows 11. <br>
+          Pre-order now and get Surface Dock or Surface Earbuds included.</p>
+        <p style="font-size: medium; text-align: left; color: #212121;">&nbsp;</p>
+        <p>&nbsp;</p></td>
+      <td width="380" height="370" valign="top" style="text-align: left; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: x-large; font-weight: bold; color: #000000;"><p><img src="SurfaceStudio2+.png" alt="" width="380" height="213"/></p>
+        <p style="font-weight: 500">Surface Studio 2+</p>
+        <p style="color: #212121; font-weight: normal; font-size: medium;">The most versatile all-in-one device that gives you a large canvas to express yourself at any angle.</p>
+        <p style="color: #212121; font-weight: normal; font-size: medium;">&nbsp;</p>
+        <p style="color: #212121; font-weight: normal; font-size: medium;">&nbsp;</p></td>
+      <td width="380" height="370" valign="top" style="text-align: left; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: x-large; font-weight: bold; color: #000000;"><p><img src="PcGamePass.png" alt="" width="380" height="213"/></p>
+        <p style="font-weight: 500">PC Game Pass</p>
+        <p style="font-size: medium; font-weight: normal; color: #212121;">Unlock 100+ great games and EA Play, plus get your first month for £1. Offer avail<span style="font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif">a</span>ble to new subscribers only.</p></td>
+      <td width="380" height="370" valign="top" style="text-align: left; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif;"><h2 style="font-size: x-large; color: #000000;"><img src="Surface-Pro-Liberty-Keyboard-with-Slim-Pen-2.png" alt="" width="380" height="213"/></h2>
+        <h2 style="font-weight: 500">Surface Pro Liberty Keyboard<br>
+          with Slim Pen 2</h2>
+        <p style="font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; color: #212121; font-size: medium; font-weight: normal;">Art and innovation come together with this <br>
+          premium keyboard designed by Surface <br>
+          and global design house, Liberty.</p>
+        <p>&nbsp;</p></td>
+    </tr>
+    <tr>
+      <td height="53" colspan="6" align="center">&nbsp;
+		<table width="100%" height="100%" align="absolute" border="0"> 
+		  <tbody>
+			<tr> 
+			  <td width="17&" style="text-align: center; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: small; font-weight: bold; color: #4D4D4D;"><a class="a" href="HomeFinal.html">Home</a></td>
+			  <td width="17%" style="text-align: center; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: small; font-weight: bold; color: #4D4D4D;"><a class="a" href="Microsoft 365 page.html">Microsoft 365</a></td>
+			  <td width="17%" style="text-align: center; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: small; font-weight: bold; color: #4D4D4D;"><a class="a" href="Teams Page.html">Teams</a></td>
+			  <td width="17%" style="text-align: center; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: small; font-weight: bold; color: #4D4D4D;"><a class="a" href="Windows Page.html">Windows</a></td>
+			  <td width="17%" style="text-align: center; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: small; font-weight: bold; color: #4D4D4D;"><a class="a" href="Surface Page.html">Surface</a></td>
+			  <td width="17%" style="text-align: center; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-size: small; font-weight: bold; color: #4D4D4D;"><a class="a" href="Feedback Page.html">Feedback</a></td>
+	</tr></tbody></table></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

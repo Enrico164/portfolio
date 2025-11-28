@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Enrico Lobozzo – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f5f5f7;
+      --bg-card: #ffffff;
+      --border-subtle: #e5e7eb;
+      --text-main: #000000;
+      --text-muted: #2a2a2a;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER / NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-left {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem 3rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 0.75rem;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 3.2vw, 2.8rem);
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0 0 0.75rem;
+      font-size: 0.98rem;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.7fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-main-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 1.75rem 1.9rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
+    }
+
+    .hero-subtitle {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-tags {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      padding: 0.18rem 0.65rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: #ffffff;
+    }
+
+    .hero-side-card {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding: 1.5rem 1.6rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      background: #eff6ff;
+    }
+
+    .hero-side-card strong {
+      color: var(--text-main);
+    }
+
+    /* Projects */
+    .section-intro {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      max-width: 60ch;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+      padding: 1rem 1.2rem 1.2rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease,
+        border-color 0.15s ease;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      border-color: var(--accent-soft);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 1.02rem;
+    }
+
+    .project-type {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 0.45rem;
+    }
+
+    .project-tech {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .project-links a {
+      font-size: 0.85rem;
+      margin-right: 0.75rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.75rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* About & Contact */
+    .about-card,
+    .contact-card {
+      background: var(--bg-card);
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+      padding: 1.4rem 1.5rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+      max-width: 60ch;
+    }
+
+    .about-card p,
+    .contact-card p {
+      color: var(--text-muted);
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.6rem 0 0;
+      font-size: 0.92rem;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: #ffffff;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <!-- EDIT THIS: Your initials or name -->
+        YN
+      </div>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / INTRO SECTION -->
+    <section class="hero" id="top">
+      <div class="hero-main-card">
+        <div class="hero-subtitle">Portfolio</div>
+        <h1><!-- EDIT: Your Name -->Enrico Lobozzo</h1>
+        <p class="hero-tagline">
+          <!-- EDIT: 1–2 sentence summary -->
+          Welcome to my portfolio! 
+        </p>
+
+        <p>
+          <!-- EDIT: a bit more detail -->
+          I have a passion for web and game development, below are a few projects I have worked on.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+        <!-- PROJECT 1: MICROSOFT-STYLE WEBSITE -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <div class="project-title">
+                Microsoft-style Product Website
+              </div>
+              <div class="project-type">Frontend / Web Design</div>
+            </div>
+          </div>
+          <p class="project-desc">
+            A multi-page website inspired by Microsoft's product pages, this taught me a lot about HTML & CSS as well as some JavaScript. 
+          </p>
+          <p class="project-tech">
+            <strong>Tech:</strong> HTML, CSS, JavaScript, Accessibility, Human-Computer Interaction.
+          </p>
+          <div class="project-links">
+            <!-- EDIT / UNCOMMENT WHEN READY -->
+            <!-- <a href="https://your-live-link.com" target="_blank">Live demo ↗</a> -->
+            <!-- <a href="https://github.com/your-username/microsoft-style-site" target="_blank">Source code ↗</a> -->
+          </div>
+        </article>
+
+        <!-- PROJECT 2: TOWER DEFENCE GAME -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <div class="project-title">Tower Defence Game</div>
+              <div class="project-type">Game Development</div>
+            </div>
+          </div>
+          <p class="project-desc">
+            A tower defence game where players place towers to stop waves of
+            enemies from reaching the base. Includes basic enemy pathing, wave
+            progression, and a simple upgrade system for towers.
+          </p>
+          <p class="project-tech">
+            <strong>Tech:</strong> <!-- EDIT: adjust to your real stack -->
+            Java (object-oriented structure), game loop, collision handling,
+            basic UI.
+          </p>
+          <div class="project-links">
+            <!-- <a href="#" target="_blank">Gameplay video ↗</a> -->
+            <!-- <a href="#" target="_blank">Source code ↗</a> -->
+          </div>
+        </article>
+
+        <!-- PROJECT 3: PLACEHOLDER -->
+        <article class="project-card">
+          <div class="project-header">
+            <div>
+              <div class="project-title">[Project Title]</div>
+              <div class="project-type">[Project Type]</div>
+            </div>
+          </div>
+          <p class="project-desc">
+            Brief description of what the project does, why you built it, and
+            anything interesting about the implementation.
+          </p>
+          <p class="project-tech">
+            <strong>Tech:</strong> [Languages, tools, libraries]
+          </p>
+          <div class="project-links">
+            <!-- Optional links -->
+            <!-- <a href="#" target="_blank">Live demo ↗</a> -->
+            <!-- <a href="#" target="_blank">Source code ↗</a> -->
+          </div>
+        </article>
+
+        <!-- To add more projects:
+             Copy one <article class="project-card">...</article>,
+             paste below, and edit the details.
+        -->
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="about-card">
+        <p>
+          I'm a student developer based in the UK, currently building smaller
+          projects to strengthen my understanding of programming and user
+          interface design. My work so far includes web pages and a tower
+          defence game, with more ideas in progress.
+        </p>
+        <p>
+          I’m focusing on writing cleaner code, structuring projects properly,
+          and making interfaces that feel clear and easy to use. I’m always
+          open to learning new tools and improving existing projects.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-card">
+        <p>
+          If you’d like to discuss my projects, give feedback, or talk about
+          opportunities, you can reach me here:
+        </p>
+        <ul class="contact-list">
+          <!-- Replace with real details -->
+          <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+          <li>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></li>
+          <!-- <li>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></li> -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Your Name. Portfolio.
+  </footer>
+</body>
+</html>
