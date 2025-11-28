@@ -24,9 +24,9 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
-      line-height: 1.6;
+        background: linear-gradient(135deg, #002368, #000000);
+        color: var(--text-main);
+        line-height: 1.6;
     }
 
     a {
@@ -35,16 +35,6 @@
     }
     a:hover {
       text-decoration: underline;
-    }
-
-    /* HEADER / NAV */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-subtle);
     }
 
     .nav {
@@ -95,11 +85,13 @@
 
     h1 {
       font-size: clamp(2.1rem, 3.2vw, 2.8rem);
+
     }
 
     h2 {
       font-size: 1.6rem;
       margin-bottom: 1rem;
+      color:rgb(255, 255, 255)
     }
 
     p {
@@ -259,7 +251,7 @@
       border: 1px solid var(--border-subtle);
       padding: 1.4rem 1.5rem;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
-      max-width: 60ch;
+      max-width: 1fr;
     }
 
     .about-card p,
@@ -295,16 +287,6 @@
   </style>
 </head>
 <body>
-  <!-- HEADER / NAV -->
-  <header>
-    <div class="nav">
-      <nav class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
   <main>
     <!-- HERO / INTRO SECTION -->
@@ -342,9 +324,11 @@
             </div>
             <p class="project-desc">
               A multi-page website inspired by Microsoft's product pages, this taught me a lot about HTML & CSS as well as some JavaScript. 
+              It includes features such as an integrated map and videos, feedback form, slideshow, among others. 
+              As well as new programming languages, this project helped me understand the importance of accessibility and usability when it comes to not only web design but any kind of design. 
             </p>
             <p class="project-tech">
-              <strong>Tech:</strong> HTML, CSS, JavaScript, Accessibility, Human-Computer Interaction.
+              <strong>Skills:</strong> HTML, CSS, JavaScript, Accessibility, Human-Computer Interaction.
             </p>
           </a>
         </article>
@@ -362,12 +346,12 @@
             <p class="project-desc">
               I planned, developed, and documented a tower defence game in Unity. 
               I followed a waterfall software development life cycle and coded the game in C.
-              This project included basic pathing, wave progression, collisions, basic animation, and a money/upgrade system. 
+              This project included basic pathing, wave progression, collisions, basic animation, and a money system. 
+              This helped me become comfortable with Object Oriented Programming and larger scale development. 
             </p>
             <p class="project-tech">
-              <strong>Tech:</strong> <!-- EDIT: adjust to your real stack -->
-              C (object-oriented structure), SDLC, collision handling,
-              basic UI.
+              <strong>Skills:</strong> <!-- EDIT: adjust to your real stack -->
+              C (OO structure), SDLC, collision handling, basic UI.
             </p>
           </a>
         </article>
@@ -376,22 +360,18 @@
         <article class="project-card">
           <div class="project-header">
             <div>
-              <div class="project-title">[Project Title]</div>
-              <div class="project-type">[Project Type]</div>
+              <div class="project-title">Portfolio Website</div>
+              <div class="project-type">GitHub hosting & Web Development</div>
             </div>
           </div>
           <p class="project-desc">
-            Brief description of what the project does, why you built it, and
-            anything interesting about the implementation.
+            Creating this portfolio has helped me become confident using Git and Github effectively. 
+            Through this project I have gained expertise with version control, repository organisation, and using GitHub Pages. 
+            Additionally, I have learnt how to structure multi-project repositories and host HTML and Unity projects inside the same deployment. 
           </p>
           <p class="project-tech">
-            <strong>Tech:</strong> [Languages, tools, libraries]
+            <strong>Skills:</strong> Git/Version Control, GitHub, Web Deployment
           </p>
-          <div class="project-links">
-            <!-- Optional links -->
-            <!-- <a href="#" target="_blank">Live demo ↗</a> -->
-            <!-- <a href="#" target="_blank">Source code ↗</a> -->
-          </div>
         </article>
 
         <!-- To add more projects:
@@ -406,15 +386,10 @@
       <h2>About</h2>
       <div class="about-card">
         <p>
-          I'm a student developer based in the UK, currently building smaller
-          projects to strengthen my understanding of programming and user
-          interface design. My work so far includes web pages and a tower
-          defence game, with more ideas in progress.
-        </p>
-        <p>
-          I’m focusing on writing cleaner code, structuring projects properly,
-          and making interfaces that feel clear and easy to use. I’m always
-          open to learning new tools and improving existing projects.
+          I’m a second-year Computer Science student at the University of York, always looking to expand my skills and push the limits of my expertise.
+          Currently, I'm working with a team to plan, document, and develop a game using a full software development life cycle.
+          Although I enjoy both game and web development, I’m also interested in broader tech roles including data analytics, cybersecurity, and other areas of computing.
+          I’m always eager to learn, improve, and take on new challenges.
         </p>
       </div>
     </section>
@@ -429,16 +404,10 @@
         </p>
         <ul class="contact-list">
           <!-- Replace with real details -->
-          <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-          <li>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></li>
-          <!-- <li>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></li> -->
+          <li>Email: enricolobozzo@gmail.com</li>
         </ul>
       </div>
     </section>
   </main>
-
-  <footer>
-    &copy; 2025 Your Name. Portfolio.
-  </footer>
 </body>
 </html>
