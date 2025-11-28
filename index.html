@@ -11,7 +11,7 @@
     }
 
     :root {
-      --bg: #f5f5f7;
+      --bg: rgb(238, 238, 238);
       --bg-card: #ffffff;
       --border-subtle: #e5e7eb;
       --text-main: #000000;
@@ -191,9 +191,15 @@
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
     }
 
+    .project-card a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
     .project-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
       border-color: var(--accent-soft);
     }
 
@@ -292,10 +298,6 @@
   <!-- HEADER / NAV -->
   <header>
     <div class="nav">
-      <div class="nav-left">
-        <!-- EDIT THIS: Your initials or name -->
-        YN
-      </div>
       <nav class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
@@ -329,49 +331,45 @@
       <div class="project-grid">
         <!-- PROJECT 1: MICROSOFT-STYLE WEBSITE -->
         <article class="project-card">
-          <div class="project-header">
-            <div>
-              <div class="project-title">
-                Microsoft-style Product Website
+          <a href="Projects/Website-project/HomeFinal.html" target="_blank">  
+            <div class="project-header">
+              <div>
+                <div class="project-title">
+                  Microsoft-style Product Website
+                </div>
+                <div class="project-type">Frontend / Web Design</div>
               </div>
-              <div class="project-type">Frontend / Web Design</div>
             </div>
-          </div>
-          <p class="project-desc">
-            A multi-page website inspired by Microsoft's product pages, this taught me a lot about HTML & CSS as well as some JavaScript. 
-          </p>
-          <p class="project-tech">
-            <strong>Tech:</strong> HTML, CSS, JavaScript, Accessibility, Human-Computer Interaction.
-          </p>
-          <div class="project-links">
-            <!-- EDIT / UNCOMMENT WHEN READY -->
-            <!-- <a href="https://your-live-link.com" target="_blank">Live demo ↗</a> -->
-            <!-- <a href="https://github.com/your-username/microsoft-style-site" target="_blank">Source code ↗</a> -->
-          </div>
+            <p class="project-desc">
+              A multi-page website inspired by Microsoft's product pages, this taught me a lot about HTML & CSS as well as some JavaScript. 
+            </p>
+            <p class="project-tech">
+              <strong>Tech:</strong> HTML, CSS, JavaScript, Accessibility, Human-Computer Interaction.
+            </p>
+          </a>
         </article>
+        
 
         <!-- PROJECT 2: TOWER DEFENCE GAME -->
         <article class="project-card">
-          <div class="project-header">
-            <div>
-              <div class="project-title">Tower Defence Game</div>
-              <div class="project-type">Game Development</div>
+          <a href="Projects/Tower-defence-game/index.html" target="_blank"></a>
+            <div class="project-header">
+              <div>
+                <div class="project-title">Tower Defence Game</div>
+                <div class="project-type">Game Development</div>
+              </div>
             </div>
-          </div>
-          <p class="project-desc">
-            A tower defence game where players place towers to stop waves of
-            enemies from reaching the base. Includes basic enemy pathing, wave
-            progression, and a simple upgrade system for towers.
-          </p>
-          <p class="project-tech">
-            <strong>Tech:</strong> <!-- EDIT: adjust to your real stack -->
-            Java (object-oriented structure), game loop, collision handling,
-            basic UI.
-          </p>
-          <div class="project-links">
-            <!-- <a href="#" target="_blank">Gameplay video ↗</a> -->
-            <!-- <a href="#" target="_blank">Source code ↗</a> -->
-          </div>
+            <p class="project-desc">
+              I planned, developed, and documented a tower defence game in Unity. 
+              I followed a waterfall software development life cycle and coded the game in C.
+              This project included basic pathing, wave progression, collisions, basic animation, and a money/upgrade system. 
+            </p>
+            <p class="project-tech">
+              <strong>Tech:</strong> <!-- EDIT: adjust to your real stack -->
+              C (object-oriented structure), SDLC, collision handling,
+              basic UI.
+            </p>
+          </a>
         </article>
 
         <!-- PROJECT 3: PLACEHOLDER -->
